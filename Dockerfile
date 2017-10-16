@@ -4,6 +4,6 @@ RUN apk update \
   && apk add ca-certificates wget \
   && update-ca-certificates \
   && mkdir /opensnp/ \
-  && cd /opensnp && wget -co opensnp.wget https://opensnp.org/data/zip/opensnp_datadump.current.zip \
+  && cd /opensnp && wget -c --progress=bar https://opensnp.org/data/zip/opensnp_datadump.current.zip \
   && apk del ca-certificates wget \
   && rm -rf /var/lib/apt/lists/*
