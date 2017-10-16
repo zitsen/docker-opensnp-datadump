@@ -1,5 +1,6 @@
 FROM alpine
-Run apk update \
+MAINTAINER Huo Linhe <linhehuo@gmail.com>
+RUN apk update \
   && apk add ca-certificates wget \
   && update-ca-certificates \
   && wget -c https://opensnp.org/data/zip/opensnp_datadump.current.zip \
